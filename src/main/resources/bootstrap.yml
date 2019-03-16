@@ -1,27 +1,27 @@
 spring:
   application:
     name: sb-cloud-hystrix
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id: SB-CLOUD-CONFIG
-      profile: dev
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#        service-id: SB-CLOUD-CONFIG
+#      profile: dev
       #uri: http://localhost:9002/
 
-#配置
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 3000
-      #getProductListDefa:
-      #  execution:
-      #        isolation:
-      #          thread:
-      #            timeoutInMilliseconds: 3000
+#配置 yml格式配置hystrix 超时时间
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+    getProductListDefa:
+      execution:
+            isolation:
+              thread:
+                timeoutInMilliseconds: 3000
 eureka:
   client:
     serviceUrl:
