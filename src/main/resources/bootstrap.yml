@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: sb-cloud-hystrix
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: SB-CLOUD-CONFIG
+      profile: dev
+      #uri: http://localhost:9002/
+
+#配置
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 3000
+      #getProductListDefa:
+      #  execution:
+      #        isolation:
+      #          thread:
+      #            timeoutInMilliseconds: 3000
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://39.108.85.204:8761/eureka/
+  #instance:
+    #注册时使用ip而不是主机名
+    #prefer-ip-address: true
+    #指定ip
+    #ip-address: ip
+server:
+  port: 9006
