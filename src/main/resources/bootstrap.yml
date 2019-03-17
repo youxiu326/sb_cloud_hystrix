@@ -1,13 +1,6 @@
 spring:
   application:
     name: sb-cloud-hystrix
-#  cloud:
-#    config:
-#      discovery:
-#        enabled: true
-#        service-id: SB-CLOUD-CONFIG
-#      profile: dev
-      #uri: http://localhost:9002/
 
 #配置 yml格式配置hystrix 超时时间
 hystrix:
@@ -22,6 +15,11 @@ hystrix:
             isolation:
               thread:
                 timeoutInMilliseconds: 3000
+
+feign:
+  hystrix:
+    enabled: true
+
 eureka:
   client:
     serviceUrl:

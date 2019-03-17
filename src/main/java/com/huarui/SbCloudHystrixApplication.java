@@ -8,7 +8,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 
-//@EnableFeignClients(basePackages = "")
+
 
 /*
 @SpringBootApplication
@@ -16,6 +16,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @EnableCircuitBreaker
 */
 @SpringCloudApplication
+@EnableFeignClients(basePackages = "com.huarui")
 public class SbCloudHystrixApplication {
 
 	public static void main(String[] args) {
